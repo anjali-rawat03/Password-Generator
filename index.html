@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="heading">Password Generator</p>
+        <div class="show-password">
+            <p class="password jsPassword">password</p>
+        </div>
+        <div class="checkboxes">
+            <div class="slidebar">
+                <label for="slider" class="label jslabel">Password Length</label>
+                <input type="range" min="6" max="24" value="15" id="slider" class="slide jsslider">
+                <small class="value">15</small>
+            </div>
+            <div class="box">
+                <label for="upperCase">Include Uppercase</label>
+                <input type="checkbox" id="upperCase" class="jsUppercase">
+            </div>
+
+            <div class="box">
+                <label for="lowerCase">Include Lowercase</label>
+                <input type="checkbox" id="lowerCase" class="jsLowercase">
+            </div>
+
+            <div class="box">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" class="jsNumbers">
+            </div>
+
+            <div class="box">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" class="jsSymbols">
+            </div>
+        </div>
+
+        <button class="jsBtn">Generate Password</button>
+
+        <div class="strength">
+            
+            <div class="word">
+                <small>Password Strength</small>
+                <small class="jsstrenght"></small>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar jsProgress">
+
+                </div>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(29, 24, 128), rgb(127, 85, 205));
+}
+
+.container{
+    background-color: rgb(242, 238, 238);
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container .heading{
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(37, 2, 119);
+    margin-bottom: 20px;
+}
+
+.container .heading::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(37, 2, 119);
+    width: 40%;
+    height: 1%;
+    top: 50px;
+    left: 108px;
+}
+
+.container .show-password{
+    background-color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 48px;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.container .show-password p{
+    color: rgb(86, 85, 85);
+}
+
+.container .checkboxes{
+    background-color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.checkboxes .slidebar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.checkboxes .slidebar .label{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(86, 85, 85);
+    width: 20%;
+}
+.checkboxes .slidebar .slide{
+    width: 40%;
+    margin-left: 75px;
+}
+.container .checkboxes .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+}
+.container .checkboxes .box label{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(86, 85, 85);
+}
+
+.container button{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background:linear-gradient(to right, rgb(29, 24, 128), rgb(127, 85, 205));
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container .strength{
+    width: 100%;
+}
+.container .strength .word{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container .progress-container{
+    width: 100%;
+    height: 10px;
+    border-style: solid;
+    border-color: rgba(175, 172, 172, 0.4);
+    border-width: 1px;
+    border-radius: 5px;
+    overflow: hidden; 
+    transition: width 0.3s ease;
+}
+
+.container .progress-container .progress-bar{
+    width: 0%;
+    height: 100%;
+}
+
+
+/*************************** TABLET *********************************/
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 400px;
+        width: 90%;
+    }
+
+    .container .heading {
+        font-size: 21px;
+    }
+
+    .container .heading::before {
+        width: 38%;
+        left: 31%;
+    }
+
+    .container .checkboxes {
+        padding: 18px;
+    }
+
+    .checkboxes .slidebar .label {
+        width: auto;
+        font-size: 13px;
+    }
+
+    .checkboxes .slidebar .slide {
+        width: 40%;
+        margin-left: 20px;
+    }
+
+    .container .checkboxes .box label {
+        font-size: 13px;
+    }
+}
+
+
+/********************************** MOBILE *************************************/
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 360px;
+        padding: 18px;
+    }
+
+    .container .heading {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .container .heading::before {
+        width: 40%;
+        left: 30%;
+        top: 47px;
+    }
+
+    .container .show-password {
+        min-height: 46px;
+        padding: 0 15px;
+    }
+
+    .container .show-password p {
+        font-size: 13px;
+    }
+
+    .container .checkboxes {
+        padding: 15px;
+    }
+
+    .checkboxes .slidebar {
+        gap: 10px;
+    }
+
+    .checkboxes .slidebar .label {
+        width: auto;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .checkboxes .slidebar .slide {
+        width: 40%;
+        margin-left: auto;
+    }
+
+    .checkboxes .slidebar .value {
+        font-size: 12px;
+    }
+
+    .container .checkboxes .box {
+        line-height: 32px;
+    }
+
+    .container .checkboxes .box label {
+        font-size: 12px;
+    }
+
+    .container button {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    .container .strength .word small {
+        font-size: 12px;
+    }
+}
+
+
+/******************************** SMALL MOBILE **************************************/
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .container .heading {
+        font-size: 19px;
+    }
+
+    .container .heading::before {
+        width: 45%;
+        left: 27.5%;
+        top: 45px;
+    }
+
+    .container .show-password {
+        padding: 0 12px;
+    }
+
+    .container .checkboxes {
+        padding: 12px;
+    }
+
+    .checkboxes .slidebar .label {
+        font-size: 11px;
+    }
+
+    .checkboxes .slidebar .slide {
+        width: 38%;
+    }
+
+    .checkboxes .slidebar .value {
+        font-size: 11px;
+    }
+
+    .container .checkboxes .box label {
+        font-size: 11px;
+    }
+
+    .container button {
+        font-size: 13px;
+    }
+}
+
+
+/*********************************** VERY SMALL MOBILE ********************************/
+
+@media (max-width: 350px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .container .heading {
+        font-size: 18px;
+    }
+
+    .container .checkboxes {
+        padding: 10px;
+    }
+
+    .checkboxes .slidebar {
+        gap: 5px;
+    }
+
+    .checkboxes .slidebar .label {
+        font-size: 10px;
+    }
+
+    .checkboxes .slidebar .slide {
+        width: 35%;
+    }
+
+    .container .checkboxes .box label {
+        font-size: 10px;
+    }
+}
